@@ -4,14 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace borrador_clases_Biblioteca.LIbreria_Distribuidora
+namespace modelo.entidades
 {
     public class Inventario
     {
-        public int Id { get; set; }
+        public int InventarioId { get; set; }
         public string Libro { get; set; }
         public double Cantidad { get; set; }
         public string Motivo { get; set; }
+
+
+
+
+        public int PresupuestoId { get; set; }
+        public Presupuesto presupuesto { get; set; }
+
 
     }
 }

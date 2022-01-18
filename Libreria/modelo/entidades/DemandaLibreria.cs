@@ -4,15 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace borrador_clases_Biblioteca.LIbreria_Distribuidora
+namespace modelo.entidades
 {
+
     public class DemandaLibreria
     {
-
-        public int Id { get; set; }
+        public int DemandalibreriaId { get; set; }
         public string Usuario { get; set; }
         public string Libro { get; set; }
         public string Fechas { get; set; }
-        public string Confirmacion { get; set; }
+        public string ConfirmacionDL { get; set; }
+
+
+
+        public int PresupuestoId { get; set; }
+        public Presupuesto presupuesto { get; set; }
+      
+    
     }
 }

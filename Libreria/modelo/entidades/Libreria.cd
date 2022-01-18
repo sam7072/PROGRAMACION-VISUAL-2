@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="modelo.entidades.DemandaLibreria">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACCAAAAAAAEAAAAAAAAAAAAAAEAAAACEAAAAIAA=</HashCode>
+      <FileName>entidades\DemandaLibreria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="modelo.entidades.Distribuidores">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAgAAAAAAAAAAAIBBBAACAAAAAgAAAAAIAA=</HashCode>
+      <FileName>entidades\Distribuidores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="modelo.entidades.Inventario">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAGAAAAAAAAACCAAAAAAAAAAAEAAAAAAAAAAIAA=</HashCode>
+      <FileName>entidades\Inventario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="modelo.entidades.InventarioLibro">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAIAAAgAAAAAAABQAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>entidades\InventarioLibro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="modelo.entidades.Presupuesto">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACAAAAAAAAEAAAQAABAAAAEAEAAAAACIAA=</HashCode>
+      <FileName>entidades\Presupuesto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
