@@ -16,8 +16,8 @@ namespace modelo.entidades
 
 
         public List<Distribuidores> Distribuidores { get; set;}
-        public List<DemandaLibreria> DemandaLibreria { get; set; }
-        public List<InventarioLibro> inventarioLibro { get; set; }  
+        public List<DemandaLibreria> DemandaLibrerias { get; set; }
+        public List<InventarioLibro> inventarioLibros { get; set; }  
 
         public Inventario Inventario { get; set; }  
 
