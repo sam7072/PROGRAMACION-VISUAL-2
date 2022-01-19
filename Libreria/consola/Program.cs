@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using modelo;
 using modelo.entidades;
 
 namespace consola
@@ -9,6 +10,46 @@ namespace consola
     {
         static void Main(string[] args)
         {
+            Inventario in1 = new Inventario()
+            {
+                Libro = "Mago de oz",
+                Cantidad = 10,
+                Motivo = "Repositorio"
+                
+            };
+
+            Distribuidores dis1 = new Distribuidores()
+            {
+                LibrosD = "Mago de oz",
+                PrecioD = 15.00M,
+                Edicion = "2001",
+                Oferta = "50%",
+                Editoriales = "Libreria Cientifica",
+                ConfirmacionD = "Aprobada"
+
+             };
+
+            DemandaLibreria dem1 = new DemandaLibreria()
+            {
+                Usuario = "Luis",
+                Libro = "Mago de oz",
+                Fechas = "12/12/2012",
+                ConfirmacionDL = "Aprobada"
+
+
+            };
+
+            InventarioLibro inL1 = new InventarioLibro()
+            {
+                InventarioL = "Mago de oz 1",
+                EstadoL = "Bueno",
+                PrecioL = 15.00M
+                
+
+            };
+
+
+
             Presupuesto primerLibro = new Presupuesto()
             {
                 LibrosP = "mago de oz",
@@ -22,6 +63,11 @@ namespace consola
 
 
             };
+
+
+            DBLibreria r = new DBLibreria();
+            r.Presupuestos.Add(primerLibro);
+            r.SaveChanges();
 
 
 
