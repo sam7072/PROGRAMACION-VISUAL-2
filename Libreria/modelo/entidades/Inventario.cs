@@ -9,11 +9,13 @@ namespace modelo.entidades
     public class Inventario
     {
         public int InventarioId { get; set; }
-        public string Libro { get; set; }
-        public double Cantidad { get; set; }
-        public string Motivo { get; set; }
+        public string Pedido { get; set; }
+        public DateTime InicioPedido { get; set; }
+        public DateTime LimitePedido { get; set; }
 
 
+
+        public IList<Prerequisito> prerequisitos { get; set; }
 
 
         public int PresupuestoId { get; set; }

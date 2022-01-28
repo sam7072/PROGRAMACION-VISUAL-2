@@ -15,24 +15,31 @@
     </TypeIdentifier>
   </Class>
   <Class Name="modelo.entidades.Inventario">
-    <Position X="2.75" Y="1" Width="1.5" />
+    <Position X="2.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAGAAAAAAAAACCAAAAAAAAAAAEAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAGAAAAAAAAACCAAAAAgAAAAAEAAAAAAAAAAIAA=</HashCode>
       <FileName>entidades\Inventario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="modelo.entidades.InventarioLibro">
-    <Position X="4.5" Y="2.75" Width="1.5" />
+    <Position X="4" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAIAAAgAAAAAAABQAAAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAACAAAAAIAAAgAAAAAAgBQAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>entidades\InventarioLibro.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="modelo.entidades.Presupuesto">
-    <Position X="2.75" Y="3.5" Width="1.5" />
+    <Position X="2.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAACAAAAAAAAEAAAQAABAAAAEAEAAAAACIAA=</HashCode>
+      <HashCode>AAAQAAECAIAAAAAAAAAAEAAAACBAAAAEAAAAAAACIAA=</HashCode>
       <FileName>entidades\Presupuesto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="modelo.entidades.Prerequisito">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAACAAAAAAAAAAAQAAEAAAAAAAAAAA=</HashCode>
+      <FileName>entidades\Prerequisito.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

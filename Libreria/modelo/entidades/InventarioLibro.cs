@@ -14,7 +14,7 @@ namespace modelo.entidades
         public decimal PrecioL { get; set; }
 
 
-
+       
 
         public int PresupuestoId { get; set; }
         public Presupuesto presupuesto { get; set; }

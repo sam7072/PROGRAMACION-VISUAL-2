@@ -11,15 +11,30 @@ namespace modelo
 {
     public class DBLibreria:DbContext
     {
+        //Constructor invoca del padre
+        public DBLibreria(DbContextOptions<DBLibreria> options)
+            :base(options)
+        {
+
+        }
+
+
+
+
+
+
+        public DbSet<Presupuesto> Presupuestos { get; set; }
         public DbSet<DemandaLibreria> DemandaLibrerias { get; set; }
         public DbSet<Distribuidores> Distribuidores { get; set; }
         public DbSet<Inventario> Inventarios { get; set; }  
         public DbSet<InventarioLibro> InventarioLibros { get; set; }    
-        public DbSet<Presupuesto> Presupuestos { get; set; }
+        public DbSet<Evaluacion> Evaluacions { get; set; }
+        public DbSet<RegistroLibro> registroLibros { get; set; }
+        public DbSet<Prerequisito> prerequisitos { get; set; }
 
 
 
-
+        /*
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string connSQL = "server=DESKTOP-R1P6HVR; database=Biblioteca; user id=sa; password=Admin123";
@@ -27,104 +42,71 @@ namespace modelo
 
             optionsBuilder.UseSqlServer(connSQL);
         
-        }
+        }*/
         //configurar el modelo de objetos
         protected override void OnModelCreating(ModelBuilder model)
         {
             //Cardinalidad de las clases 
 
+
+            //demanda-presupuesto
             model.Entity<DemandaLibreria>()
                 .HasOne(Dem => Dem.presupuesto)
                 .WithMany(Pre => Pre.DemandaLibrerias)
                 .HasForeignKey(Dem => Dem.PresupuestoId);
 
-
+            //distribuidores-presupuesto
             model.Entity<Distribuidores>()
                 .HasOne(Dis => Dis.presupuesto)
                 .WithMany(Pre => Pre.Distribuidores)
                 .HasForeignKey(Dis => Dis.PresupuestoId);
 
-
-
-
-            //Configuracion 
+            //inventarioLibro-presupuesto
             model.Entity<InventarioLibro>()
-                .HasOne(inventario => inventario.presupuesto)
-                .WithMany(lib => lib.inventarioLibros)
-                .HasForeignKey(inventario => inventario.PresupuestoId);
+                .HasOne(inventarioL => inventarioL.presupuesto)
+                .WithMany(lib => lib.InventarioLibros)
+                .HasForeignKey(inventarioL => inventarioL.PresupuestoId);
 
 
 
 
 
-            /* cardinalidad 1 a 1
-            model.Entity<Inventario>()
-            .HasOne
-            */
+            //presupuesto - RegistroLibro
+            model.Entity<Presupuesto>()
+                .HasOne(presupuesto => presupuesto.RegistroLibro)
+                .WithOne(regis => regis.Presupuesto)
+                .HasForeignKey<RegistroLibro>(regis => regis.RegistroLibroId);
+
+            //presupuesto - inventario 
+            model.Entity<Presupuesto>()
+                .HasOne(presupuesto => presupuesto.Inventario)
+                .WithOne(inv => inv.presupuesto)
+                .HasForeignKey<Inventario>(inventario => inventario.PresupuestoId);
+
+            //presupuesto - Evaluacion
+            model.Entity<Presupuesto>()
+                .HasOne(presupuesto => presupuesto.Evaluacion)
+                .WithOne(evaluacion => evaluacion.Presupuesto)
+                .HasForeignKey<Evaluacion>(evaluacion => evaluacion.PresupuestoId);
 
 
 
-
-            /*
-
-            // configurar el modelo de clases 
-            model.Entity<Configuracion>()
-                .HasNokey();
-            //periodo 
-            model.Entity<Configuracion>()
-                .HasOne(Confi => Confi.PeriodoVigente)
-                .WithMany()
-                .HasForeignKey(Confi => Confi.PeriodoVigente);
-
-
-
-            //Prerequisitos
-            //Malla
+            //inventario
             model.Entity<Prerequisito>()
-                .HasOne(prerequisito => prerequisito.Prerequisito)
-                .WithMany(malla => malla.Prerequisitos)
-                .HasForeignKey(prerequisito => prerequisito.MallaId);
+                .HasOne(prerequisito => prerequisito.Inventario)
+                .WithMany(inve => inve.prerequisitos)
+                .HasForeignKey(prerequisito => prerequisito.InventarioId);
 
-            //Materia
+            //inventarioLibro
             model.Entity<Prerequisito>()
-                .HasOne(prerequisito => prerequisito.Prerequisito)
-                .WithMany(materia => materia.Prerequisitos)
-                .HasForeignKey(prerequisito => prerequisito.MateriaId);
+                .HasOne(prerequisito => prerequisito.Presupuesto)
+                .WithMany(pre => pre.prerequisitos)
+                .HasForeignKey(prerequisito => prerequisito.PresupuestoId);
 
 
-            //clave primaria formada por dos claves foreneas
-            model.Entity<Prequisitos>()
-                .HasKey(prerequisito => new
-                {
-                    prerequisito.MallaId,
-                    prerequisito.MateriaId
-                });
-
-            //Matricula Det
-            //-calificacion
-            model.Entity<Matricula_Det>()
-                .HasOne(matricula_det => matricula_det.calificaciones)
-                .WithOne(calificacion => calificacion.Matricula_det)
-                .HasForeignKey<Calificacion>(calificacion => calificacion.Matricula_detID);
-
-
-            //malla-materia
-            // de one a one
-            model.Entity<Malla>()
-                .HasOne(malla => malla.Materia)
-                .WithMany(materia => materia.Malla)
-                .HasForeignKey<Malla>(malla => malla.MateriaId);
-
-
-            //-carrera
-            model.Entity<Malla>()
-                .HasOne(malla => malla.Carrera)
-                .WithMany()
-                .HasForeignKey(malla => malla.CarreraID);
-
-            */
-
-
+            //clave primario formada por 2 foreaneas
+            model.Entity<Prerequisito>()
+                .HasKey(prerequisito => new { prerequisito.InventarioId, prerequisito.PresupuestoId });
 
 
 

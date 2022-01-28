@@ -1,0 +1,57 @@
+﻿@using modelo.entidades;
+@model IEnumerable<DemandaLibreria>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Demanda Libreria</h1>
+<p>Libreria</p>
+
+<div class="container">
+     <div class="row">
+        <div class="col-sm-5">
+            <h3>Pedidos</h3>
+        </div>
+        <div class="col-sm-5">
+            <a href="" class="btn btn-success d-block">Agregar nuevo </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Usuario</td>
+                    <td>Libro</td>
+                    <td>Fecha</td>
+                    <td>confirmacion</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DemandaLibreria demandaLibreria in Model)
+                {
+                    <tr>
+                        <td>@demandaLibreria.DemandalibreriaId</td>
+                        <td>@demandaLibreria.Usuario</td>
+                        <td>@demandaLibreria.Libro</td>
+                        <td>@demandaLibreria.Fechas</td>
+                        <td>@demandaLibreria.ConfirmacionDL</td>
+                        <td>
+                            <a href="#" class="btn btn-primary">Editar</a>
+                            <a href="#" class="btn btn-danger">Borrar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+
+</div>

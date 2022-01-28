@@ -1,0 +1,58 @@
+﻿@using modelo.entidades;
+@model IEnumerable<InventarioLibro>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Inventario Libros</h1>
+<p>Libros</p>
+
+
+<div class="container">
+     <div class="row">
+        <div class="col-sm-5">
+            <h3>Inventario libros</h3>
+        </div>
+        <div class="col-sm-5">
+            <a href="" class="btn btn-success d-block">Agregar nuevo </a>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Inventario</td>
+                    <td>Estado</td>
+                    <td>Precio</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (InventarioLibro inventarioLibro in Model )
+                {
+                    <tr>
+                        <td>@inventarioLibro.InventarioLibroId</td>
+                        <td>@inventarioLibro.InventarioL</td>
+                        <td>@inventarioLibro.EstadoL</td>
+                        <td>@inventarioLibro.PrecioL</td>
+                        <td>
+                            <a href="#" class="btn btn-primary">Editar</a>
+                            <a href="#" class="btn btn-danger">Borrar</a>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+</div>
+

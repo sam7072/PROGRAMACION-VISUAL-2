@@ -12,7 +12,7 @@ namespace modelo.entidades
         public int DemandalibreriaId { get; set; }
         public string Usuario { get; set; }
         public string Libro { get; set; }
-        public string Fechas { get; set; }
+        public DateTime Fechas { get; set; }
         public string ConfirmacionDL { get; set; }
 
 
