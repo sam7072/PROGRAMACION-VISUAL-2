@@ -15,9 +15,22 @@
             <h3>Pedidos</h3>
         </div>
         <div class="col-sm-5">
-            <a href="" class="btn btn-success d-block">Agregar nuevo </a>
+            <a  asp-controller="DemandaLibreria" asp-action="Create"class="btn btn-success d-block">Agregar nuevo</a>
         </div>
     </div>
+    @if (TempData["mensaje"] != null)
+    {
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["mensaje"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">
+                &times;
+            </span>
+        </button>
+    </div>
+    }
+
+
 
     <div class="row">
         <table class="table table-bordered">
@@ -40,8 +53,8 @@
                         <td>@demandaLibreria.Fechas</td>
                         <td>@demandaLibreria.ConfirmacionDL</td>
                         <td>
-                            <a href="#" class="btn btn-primary">Editar</a>
-                            <a href="#" class="btn btn-danger">Borrar</a>
+                            <a asp-controller="DemandaLibreria" asp-action="Edit" asp-route-id="@demandaLibreria.DemandalibreriaId" class="btn btn-primary">Editar</a>
+                            <a asp-controller="DemandaLibreria" asp-action="Delete" asp-route-id="@demandaLibreria.DemandalibreriaId" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
                 }
