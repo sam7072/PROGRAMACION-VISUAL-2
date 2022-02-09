@@ -19,15 +19,72 @@ namespace WebApp.Controllers
             return View(listaPresupuestos);
         }
 
-
-        public IActionResult Delete()
-        {
-            return View();
-        }
+        //creación presupuesto
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
-    }
+        [HttpPost]
+        public IActionResult Create( Presupuesto presupuesto)
+        {
+            //Grabar presupuesto
+            db.Presupuestos.Add(presupuesto);
+            db.SaveChanges();
+            TempData["mensaje"] = $"El Presupuesto {presupuesto.LibrosP} creado exitosamente";
+
+            return RedirectToAction("Index");
+        }
+
+
+
+        //edicion Presupuesto
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Presupuesto presupuesto = db.Presupuestos.Find(id);
+            return View(presupuesto);
+        
+        }
+        [HttpPost]
+        public IActionResult Edit(Presupuesto presupuesto)
+        {
+            //Grabar presupuesto
+            db.Presupuestos.Update(presupuesto);
+            db.SaveChanges();
+
+            TempData["mensaje"] = $"El Presupuesto {presupuesto.LibrosP} ha sido actualizado exitosamente";
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
+
+        //borrar Presupuesto
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Presupuesto presupuesto = db.Presupuestos.Find(id);
+            return View(presupuesto);
+
+
+        }
+
+        [HttpPost]
+        public IActionResult Delete( Presupuesto presupuesto)
+        {
+            //Grabar presupuesto
+            db.Presupuestos.Remove(presupuesto);
+            db.SaveChanges();
+
+            TempData["mensaje"] = $"El presupuesto {presupuesto.LibrosP} ha sido eliminado exitosamente";
+            return RedirectToAction("Index");
+
+        }
+
+
+        }
 }

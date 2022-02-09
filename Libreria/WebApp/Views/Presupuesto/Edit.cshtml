@@ -1,0 +1,47 @@
+﻿@using modelo.entidades
+@model Presupuesto
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Actualizacion del Presupuesto</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>
+                Actualizar Presupuesto: @Model.LibrosP
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <form asp-action="Edit" method="post">
+                <input type="text" asp-for="PresupuestoId" hidden />
+
+                <div class="form-group">
+                    <label class="custom-control-label">Nombre: </label>
+                    <input class="form-control" type="text" asp-for="LibrosP" />
+                </div>
+                <div class="form-group">
+                    <label class="custom-control-label">Cédula: </label>
+                    <input class="form-control"  type="text" asp-for="PrecioP" />
+                </div>
+                <div class="form-group">
+                    <label class="custom-control-label">Correo: </label>
+                    <input class="form-control" type="text" asp-for="CantidadP" />
+                </div>
+                <div class="form-group">
+                    <label class="custom-control-label">Celular: </label>
+                    <input class="form-control"  type="text" asp-for="DistribuidorP" />
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Actualizar Presupuesto" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+

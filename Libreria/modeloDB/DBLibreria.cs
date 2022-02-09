@@ -11,13 +11,22 @@ namespace modelo
 {
     public class DBLibreria:DbContext
     {
+        public DBLibreria()
+        {
+
+        }
         //Constructor invoca del padre
         public DBLibreria(DbContextOptions<DBLibreria> options)
             :base(options)
         {
-
+            
         }
-
+        // Se asegura el borrado y la creación de la base de datos
+        public void PreparaDB()
+        {
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
+        }
 
 
 
@@ -31,23 +40,29 @@ namespace modelo
         public DbSet<Evaluacion> Evaluacions { get; set; }
         public DbSet<RegistroLibro> registroLibros { get; set; }
         public DbSet<Prerequisito> prerequisitos { get; set; }
+        public DbSet<Compra> compras { get; set; }
+        public DbSet<Configuracion> configuracions { get; set; }
+        public DbSet<ReseñaLibro> reseñaLibros { get; set; }
 
 
-
-        /*
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            string connSQL = "server=DESKTOP-R1P6HVR; database=Biblioteca; user id=sa; password=Admin123";
-
-
-            optionsBuilder.UseSqlServer(connSQL);
-        
-        }*/
+            // Si no se ha configurado la conección la configura con SqlServer
+            if (!options.IsConfigured)
+            {
+                options.UseSqlServer("server=DESKTOP-R1P6HVR;database=LibreriaWEB;user id=Sa; password=Admin123");
+                // .LogTo(Console.WriteLine, LogLevel.Information);  // Para activar el modo debug
+            }
+        }
         //configurar el modelo de objetos
         protected override void OnModelCreating(ModelBuilder model)
         {
             //Cardinalidad de las clases 
 
+
+            //clase Configuracion Pk distinta a entero
+            model.Entity<Configuracion>()
+                .HasKey(configuracion => configuracion.NombreDistribuidor);
 
             //demanda-presupuesto
             model.Entity<DemandaLibreria>()
@@ -82,7 +97,7 @@ namespace modelo
                 .HasOne(presupuesto => presupuesto.Inventario)
                 .WithOne(inv => inv.presupuesto)
                 .HasForeignKey<Inventario>(inventario => inventario.PresupuestoId);
-
+           
             //presupuesto - Evaluacion
             model.Entity<Presupuesto>()
                 .HasOne(presupuesto => presupuesto.Evaluacion)
@@ -95,12 +110,14 @@ namespace modelo
             model.Entity<Prerequisito>()
                 .HasOne(prerequisito => prerequisito.Inventario)
                 .WithMany(inve => inve.prerequisitos)
+                .OnDelete(DeleteBehavior.NoAction)
                 .HasForeignKey(prerequisito => prerequisito.InventarioId);
 
-            //inventarioLibro
+            //Presupuesto
             model.Entity<Prerequisito>()
                 .HasOne(prerequisito => prerequisito.Presupuesto)
                 .WithMany(pre => pre.prerequisitos)
+                .OnDelete(DeleteBehavior.NoAction)
                 .HasForeignKey(prerequisito => prerequisito.PresupuestoId);
 
 

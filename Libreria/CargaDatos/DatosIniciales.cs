@@ -12,7 +12,7 @@ namespace CargaDatos
     {
         public enum ListaTipo
         {
-            Presupuestos,Iventarios,Prerequisitos
+            Presupuestos,Iventarios,Prerequisitos,Configuracion
         }
 
 
@@ -30,7 +30,7 @@ namespace CargaDatos
                 Edicion = "2001",
                 Oferta = "40%",
                 Editoriales = "Libreria Cientifica",
-                ConfirmacionD = "Rechazada"
+                ConfirmacionD = ConfirmacionD.Rechazado
 
             };
             Distribuidores dis2 = new Distribuidores()
@@ -40,7 +40,7 @@ namespace CargaDatos
                 Edicion = "2001",
                 Oferta = "50%",
                 Editoriales = "Cedisa Libros",
-                ConfirmacionD = "Aceptada"
+                ConfirmacionD = ConfirmacionD.Aprobado
 
             };
 
@@ -53,7 +53,7 @@ namespace CargaDatos
                 Edicion = "2007",
                 Oferta = "0%",
                 Editoriales = "Libreria Española",
-                ConfirmacionD = "Rechazada"
+                ConfirmacionD = ConfirmacionD.Rechazado
 
             };
             Distribuidores dis4 = new Distribuidores()
@@ -63,7 +63,7 @@ namespace CargaDatos
                 Edicion = "2021",
                 Oferta = "10%",
                 Editoriales = "Libreria Cientifica",
-                ConfirmacionD = "Rechazada"
+                ConfirmacionD = ConfirmacionD.Rechazado
 
             };
             Distribuidores dis5 = new Distribuidores()
@@ -73,7 +73,7 @@ namespace CargaDatos
                 Edicion = "2004",
                 Oferta = "20%",
                 Editoriales = "Cedisa Libros",
-                ConfirmacionD = "Aceptada"
+                ConfirmacionD = ConfirmacionD.Aprobado
 
             };
 
@@ -86,7 +86,7 @@ namespace CargaDatos
                 Edicion = "2009",
                 Oferta = "0%",
                 Editoriales = "Mr.Books",
-                ConfirmacionD = "Aceptada"
+                ConfirmacionD = ConfirmacionD.Aprobado
 
             };
             Distribuidores dis7 = new Distribuidores()
@@ -96,7 +96,7 @@ namespace CargaDatos
                 Edicion = "2008",
                 Oferta = "15%",
                 Editoriales = "Cedisa Libros",
-                ConfirmacionD = "Rechazado"
+                ConfirmacionD = ConfirmacionD.Rechazado
 
             };
 
@@ -109,7 +109,7 @@ namespace CargaDatos
                 Edicion = "2010",
                 Oferta = "50%",
                 Editoriales = "Libreria Española",
-                ConfirmacionD = "Aceptada"
+                ConfirmacionD = ConfirmacionD.Aprobado
 
             };
             Distribuidores dis9 = new Distribuidores()
@@ -119,7 +119,7 @@ namespace CargaDatos
                 Edicion = "2011",
                 Oferta = "0%",
                 Editoriales = "Libreria Cientifica",
-                ConfirmacionD = "Rechazada"
+                ConfirmacionD = ConfirmacionD.Rechazado
 
             };
 
@@ -133,7 +133,7 @@ namespace CargaDatos
                 Edicion = "2015",
                 Oferta = "50%",
                 Editoriales = "Libreria Cientifica",
-                ConfirmacionD = "Rechazada"
+                ConfirmacionD = ConfirmacionD.Rechazado
 
             };
             Distribuidores dis11 = new Distribuidores()
@@ -143,7 +143,7 @@ namespace CargaDatos
                 Edicion = "2016",
                 Oferta = "30%",
                 Editoriales = "Cedisa Libros",
-                ConfirmacionD = "Rechazada"
+                ConfirmacionD = ConfirmacionD.Rechazado
 
             };
             Distribuidores dis12 = new Distribuidores()
@@ -153,7 +153,7 @@ namespace CargaDatos
                 Edicion = "2013",
                 Oferta = "10%",
                 Editoriales = "Libreria novoLibros",
-                ConfirmacionD = "Aceptada"
+                ConfirmacionD = ConfirmacionD.Aprobado
 
             };
 
@@ -193,14 +193,14 @@ namespace CargaDatos
                 Usuario = "Pedro",
                 Libro = "Mago de oz",
                 Fechas = new DateTime(2012,12,12),
-                ConfirmacionDL = "Aprobada"
+                
             };
             DemandaLibreria dem2 = new DemandaLibreria()
             {
                 Usuario = "Maria",
                 Libro = "Mago de oz",
                 Fechas = new DateTime(2012, 01, 01),
-                ConfirmacionDL = "no Aprobada"
+                
             };
 
             //El principito
@@ -209,7 +209,7 @@ namespace CargaDatos
                 Usuario = "Juan",
                 Libro = "El principito",
                 Fechas = new DateTime(2005, 11, 15),
-                ConfirmacionDL = "Aprobada"
+               
             };
 
 
@@ -219,21 +219,21 @@ namespace CargaDatos
                 Usuario = "Allan",
                 Libro = "Viaje al centro de la tierra",
                 Fechas = new DateTime(2009, 05, 06),
-                ConfirmacionDL = "no Aprobada"
+                
             };
             DemandaLibreria dem5 = new DemandaLibreria()
             {
                 Usuario = "Isabel",
                 Libro = "Viaje al centro de la tierra",
                 Fechas = new DateTime(2009, 06, 10),
-                ConfirmacionDL = "Aprobada"
+                
             };
             DemandaLibreria dem6 = new DemandaLibreria()
             {
                 Usuario = "Anthony",
                 Libro = "Viaje al centro de la tierra",
                 Fechas = new DateTime(2009, 07, 15),
-                ConfirmacionDL = "no Aprobada"
+               
             };
 
 
@@ -244,14 +244,14 @@ namespace CargaDatos
                 Usuario = "Mateo",
                 Libro = "De la luna a la Tierra",
                 Fechas = new DateTime(2008, 10, 09),
-                ConfirmacionDL = "Aprobada"
+                
             };
             DemandaLibreria dem8 = new DemandaLibreria()
             {
                 Usuario = "Carlos",
                 Libro = "De la luna a la Tierra",
                 Fechas = new DateTime(2008, 12, 09),
-                ConfirmacionDL = "no Aprobada"
+                
             };
 
 
@@ -263,14 +263,14 @@ namespace CargaDatos
                 Usuario = "Luis",
                 Libro = "Las mil y una Noches",
                 Fechas = new DateTime(2003, 03, 07),
-                ConfirmacionDL = "Aprobada"
+                
             };
             DemandaLibreria dem10 = new DemandaLibreria()
             {
                 Usuario = "Federico",
                 Libro = "Las mil y una Noches",
                 Fechas = new DateTime(2003, 04, 21),
-                ConfirmacionDL = "no Aprobada"
+               
             };
             List<DemandaLibreria> ListaDemandaLibreria = new List<DemandaLibreria>()
             {
@@ -301,7 +301,7 @@ namespace CargaDatos
             InventarioLibro inL1 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 1",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 15.00M
 
 
@@ -309,7 +309,7 @@ namespace CargaDatos
             InventarioLibro inL2 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 2",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 12.00M
 
 
@@ -317,7 +317,7 @@ namespace CargaDatos
             InventarioLibro inL3 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 3",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 10.00M
 
 
@@ -325,7 +325,7 @@ namespace CargaDatos
             InventarioLibro inL4 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 4",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 12.00M
 
 
@@ -333,7 +333,7 @@ namespace CargaDatos
             InventarioLibro inL5 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 5",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 15.00M
 
 
@@ -341,7 +341,7 @@ namespace CargaDatos
             InventarioLibro inL6 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 6",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 12.00M
 
 
@@ -349,7 +349,7 @@ namespace CargaDatos
             InventarioLibro inL7 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 7",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 10.00M
 
 
@@ -357,7 +357,7 @@ namespace CargaDatos
             InventarioLibro inL8 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 8",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 12.00M
 
 
@@ -365,7 +365,7 @@ namespace CargaDatos
             InventarioLibro inL9 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 9",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 15.00M
 
 
@@ -373,7 +373,7 @@ namespace CargaDatos
             InventarioLibro inL10 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 10",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 12.00M
 
 
@@ -381,7 +381,7 @@ namespace CargaDatos
             InventarioLibro inL11 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 11",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 10.00M
 
 
@@ -389,7 +389,7 @@ namespace CargaDatos
             InventarioLibro inL12 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 12",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 12.00M
 
 
@@ -397,7 +397,7 @@ namespace CargaDatos
             InventarioLibro inL13 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 13",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 15.00M
 
 
@@ -405,7 +405,7 @@ namespace CargaDatos
             InventarioLibro inL14 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 14",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 12.00M
 
 
@@ -413,7 +413,7 @@ namespace CargaDatos
             InventarioLibro inL15 = new InventarioLibro()
             {
                 InventarioL = "Mago de oz 15",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 10.00M
 
 
@@ -428,7 +428,7 @@ namespace CargaDatos
             InventarioLibro inL16 = new InventarioLibro()
             {
                 InventarioL = "El principito 1",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 20.00M
 
 
@@ -436,7 +436,7 @@ namespace CargaDatos
             InventarioLibro inL17 = new InventarioLibro()
             {
                 InventarioL = "El principito 2",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 17.00M
 
 
@@ -444,7 +444,7 @@ namespace CargaDatos
             InventarioLibro inL18 = new InventarioLibro()
             {
                 InventarioL = "El principito 3",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 14.00M
 
 
@@ -452,7 +452,7 @@ namespace CargaDatos
             InventarioLibro inL19 = new InventarioLibro()
             {
                 InventarioL = "El principito 4",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 17.00M
 
 
@@ -460,7 +460,7 @@ namespace CargaDatos
             InventarioLibro inL20 = new InventarioLibro()
             {
                 InventarioL = "El principito 5",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 20.00M
 
 
@@ -468,7 +468,7 @@ namespace CargaDatos
             InventarioLibro inL21 = new InventarioLibro()
             {
                 InventarioL = "El principito 6",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 17.00M
 
 
@@ -476,7 +476,7 @@ namespace CargaDatos
             InventarioLibro inL22 = new InventarioLibro()
             {
                 InventarioL = "El principito 7",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 14.00M
 
 
@@ -484,7 +484,7 @@ namespace CargaDatos
             InventarioLibro inL23 = new InventarioLibro()
             {
                 InventarioL = "El principito 8",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 17.00M
 
 
@@ -492,7 +492,7 @@ namespace CargaDatos
             InventarioLibro inL24 = new InventarioLibro()
             {
                 InventarioL = "El principito 9",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 20.00M
 
 
@@ -500,7 +500,7 @@ namespace CargaDatos
             InventarioLibro inL25 = new InventarioLibro()
             {
                 InventarioL = "El principito 10",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 17.00M
 
 
@@ -508,7 +508,7 @@ namespace CargaDatos
             InventarioLibro inL26 = new InventarioLibro()
             {
                 InventarioL = "El principito 11",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 14.00M
 
 
@@ -516,7 +516,7 @@ namespace CargaDatos
             InventarioLibro inL27 = new InventarioLibro()
             {
                 InventarioL = "El principito 12",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 17.00M
 
 
@@ -524,7 +524,7 @@ namespace CargaDatos
             InventarioLibro inL28 = new InventarioLibro()
             {
                 InventarioL = "El principito 13",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 20.00M
 
 
@@ -532,7 +532,7 @@ namespace CargaDatos
             InventarioLibro inL29 = new InventarioLibro()
             {
                 InventarioL = "El principito 14",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 17.00M
 
 
@@ -540,7 +540,7 @@ namespace CargaDatos
             InventarioLibro inL30 = new InventarioLibro()
             {
                 InventarioL = "El principito 15",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 14.00M
 
 
@@ -556,7 +556,7 @@ namespace CargaDatos
             InventarioLibro inL31 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 1",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 15.00M
 
 
@@ -564,7 +564,7 @@ namespace CargaDatos
             InventarioLibro inL32 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 2",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 12.00M
 
 
@@ -572,7 +572,7 @@ namespace CargaDatos
             InventarioLibro inL33 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 3",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 9.00M
 
 
@@ -580,7 +580,7 @@ namespace CargaDatos
             InventarioLibro inL34 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 4",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 12.00M
 
 
@@ -588,7 +588,7 @@ namespace CargaDatos
             InventarioLibro inL35 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 5",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 15.00M
 
 
@@ -596,7 +596,7 @@ namespace CargaDatos
             InventarioLibro inL36 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 6",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 12.00M
 
 
@@ -604,7 +604,7 @@ namespace CargaDatos
             InventarioLibro inL37 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 7",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 9.00M
 
 
@@ -612,7 +612,7 @@ namespace CargaDatos
             InventarioLibro inL38 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 8",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 12.00M
 
 
@@ -620,7 +620,7 @@ namespace CargaDatos
             InventarioLibro inL39 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 9",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 15.00M
 
 
@@ -628,7 +628,7 @@ namespace CargaDatos
             InventarioLibro inL40 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 10",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 12.00M
 
 
@@ -636,7 +636,7 @@ namespace CargaDatos
             InventarioLibro inL41 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 11",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 9.00M
 
 
@@ -644,7 +644,7 @@ namespace CargaDatos
             InventarioLibro inL42 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 12",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 12.00M
 
 
@@ -652,7 +652,7 @@ namespace CargaDatos
             InventarioLibro inL43 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 13",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 15.00M
 
 
@@ -660,7 +660,7 @@ namespace CargaDatos
             InventarioLibro inL44 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 14",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 12.00M
 
 
@@ -668,7 +668,7 @@ namespace CargaDatos
             InventarioLibro inL45 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 15",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 9.00M
 
 
@@ -676,7 +676,7 @@ namespace CargaDatos
             InventarioLibro inL46 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 16",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 12.00M
 
 
@@ -684,7 +684,7 @@ namespace CargaDatos
             InventarioLibro inL47 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 17",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 15.00M
 
 
@@ -692,7 +692,7 @@ namespace CargaDatos
             InventarioLibro inL48 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 18",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 12.00M
 
 
@@ -700,7 +700,7 @@ namespace CargaDatos
             InventarioLibro inL49 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 19",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 9.00M
 
 
@@ -708,7 +708,7 @@ namespace CargaDatos
             InventarioLibro inL50 = new InventarioLibro()
             {
                 InventarioL = "Viaje al centro de la Tierra 20",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 12.00M
 
 
@@ -722,7 +722,7 @@ namespace CargaDatos
             InventarioLibro inL51 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 1",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 16.00M
 
 
@@ -730,7 +730,7 @@ namespace CargaDatos
             InventarioLibro inL52 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 2",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 10.00M
 
 
@@ -738,7 +738,7 @@ namespace CargaDatos
             InventarioLibro inL53 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 3",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 8.00M
 
 
@@ -746,7 +746,7 @@ namespace CargaDatos
             InventarioLibro inL54 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 4",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 10.00M
 
 
@@ -754,7 +754,7 @@ namespace CargaDatos
             InventarioLibro inL55 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 5",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 16.00M
 
 
@@ -762,7 +762,7 @@ namespace CargaDatos
             InventarioLibro inL56 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 6",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 10.00M
 
 
@@ -770,7 +770,7 @@ namespace CargaDatos
             InventarioLibro inL57 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 7",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 8.00M
 
 
@@ -778,7 +778,7 @@ namespace CargaDatos
             InventarioLibro inL58 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 8",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 10.00M
 
 
@@ -786,7 +786,7 @@ namespace CargaDatos
             InventarioLibro inL59 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 9",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 16.00M
 
 
@@ -794,7 +794,7 @@ namespace CargaDatos
             InventarioLibro inL60 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 10",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 10.00M
 
 
@@ -802,7 +802,7 @@ namespace CargaDatos
             InventarioLibro inL61 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 11",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 8.00M
 
 
@@ -810,7 +810,7 @@ namespace CargaDatos
             InventarioLibro inL62 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 12",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 10.00M
 
 
@@ -818,7 +818,7 @@ namespace CargaDatos
             InventarioLibro inL63 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 13",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 16.00M
 
 
@@ -826,7 +826,7 @@ namespace CargaDatos
             InventarioLibro inL64 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 14",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 10.00M
 
 
@@ -834,7 +834,7 @@ namespace CargaDatos
             InventarioLibro inL65 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 15",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 8.00M
 
 
@@ -842,7 +842,7 @@ namespace CargaDatos
             InventarioLibro inL66 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 16",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 10.00M
 
 
@@ -850,7 +850,7 @@ namespace CargaDatos
             InventarioLibro inL67 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 17",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 16.00M
 
 
@@ -858,7 +858,7 @@ namespace CargaDatos
             InventarioLibro inL68 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 18",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 10.00M
 
 
@@ -866,7 +866,7 @@ namespace CargaDatos
             InventarioLibro inL69 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 19",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 8.00M
 
 
@@ -874,7 +874,7 @@ namespace CargaDatos
             InventarioLibro inL70 = new InventarioLibro()
             {
                 InventarioL = "De la Luna a la Tierra 20",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 10.00M
 
 
@@ -889,7 +889,7 @@ namespace CargaDatos
             InventarioLibro inL71 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 1",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 20.00M
 
 
@@ -897,7 +897,7 @@ namespace CargaDatos
             InventarioLibro inL72 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 2",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 18.00M
 
 
@@ -905,7 +905,7 @@ namespace CargaDatos
             InventarioLibro inL73 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 3",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 14.00M
 
 
@@ -913,7 +913,7 @@ namespace CargaDatos
             InventarioLibro inL74 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 4",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 18.00M
 
 
@@ -921,7 +921,7 @@ namespace CargaDatos
             InventarioLibro inL75 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 5",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 20.00M
 
 
@@ -929,7 +929,7 @@ namespace CargaDatos
             InventarioLibro inL76 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 6",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 18.00M
 
 
@@ -937,7 +937,7 @@ namespace CargaDatos
             InventarioLibro inL77 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 7",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 14.00M
 
 
@@ -945,7 +945,7 @@ namespace CargaDatos
             InventarioLibro inL78 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 8",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 18.00M
 
 
@@ -953,7 +953,7 @@ namespace CargaDatos
             InventarioLibro inL79 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 9",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 20.00M
 
 
@@ -961,7 +961,7 @@ namespace CargaDatos
             InventarioLibro inL80 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 10",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 18.00M
 
 
@@ -969,7 +969,7 @@ namespace CargaDatos
             InventarioLibro inL81 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 11",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 14.00M
 
 
@@ -977,7 +977,7 @@ namespace CargaDatos
             InventarioLibro inL82 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 12",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 18.00M
 
 
@@ -985,7 +985,7 @@ namespace CargaDatos
             InventarioLibro inL83 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 13",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 20.00M
 
 
@@ -993,7 +993,7 @@ namespace CargaDatos
             InventarioLibro inL84 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 14",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 18.00M
 
 
@@ -1001,7 +1001,7 @@ namespace CargaDatos
             InventarioLibro inL85 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 15",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 14.00M
 
 
@@ -1009,7 +1009,7 @@ namespace CargaDatos
             InventarioLibro inL86 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 16",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 18.00M
 
 
@@ -1017,7 +1017,7 @@ namespace CargaDatos
             InventarioLibro inL87 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 17",
-                EstadoL = "Bueno",
+                EstadoL = EstadoL.Bueno,
                 PrecioL = 20.00M
 
 
@@ -1025,7 +1025,7 @@ namespace CargaDatos
             InventarioLibro inL88 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 18",
-                EstadoL = "Regular",
+                EstadoL = EstadoL.Regular,
                 PrecioL = 18.00M
 
 
@@ -1033,7 +1033,7 @@ namespace CargaDatos
             InventarioLibro inL89 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 19",
-                EstadoL = "Dañado",
+                EstadoL = EstadoL.Dañado,
                 PrecioL = 14.00M
 
 
@@ -1041,7 +1041,7 @@ namespace CargaDatos
             InventarioLibro inL90 = new InventarioLibro()
             {
                 InventarioL = "Las mil y una Noches 20",
-                EstadoL = "Perdido",
+                EstadoL = EstadoL.Perdido,
                 PrecioL = 18.00M
 
 
@@ -1090,10 +1090,22 @@ namespace CargaDatos
                 Evaluacion = new Evaluacion()
                 {
                     FechaE = new DateTime(2022, 05, 05),
-                    Calificaion = "Regular"
+                    Calificaion = Calificaion.Regular
+
+                },
+                ReseñaLibro = new ReseñaLibro()
+                {
+                    Reseña = CalfLibro.Excelente,
+                    Detalles = ""
+
+                },
+                Compra = new Compra()
+                {
+                    Fecha = DateTime.Now,
+                    CompraEstado = CompraEstado.Pendiente,
 
                 }
-                           
+
 
             };
             
@@ -1118,7 +1130,19 @@ namespace CargaDatos
                 Evaluacion = new Evaluacion()
                 {
                     FechaE = new DateTime(2022, 05, 05),
-                    Calificaion = "Regular"
+                    Calificaion = Calificaion.Regular
+
+                },
+                ReseñaLibro = new ReseñaLibro()
+                {
+                    Reseña = CalfLibro.buena,
+                    Detalles = ""
+
+                },
+                Compra = new Compra()
+                {
+                    Fecha = DateTime.Now,
+                    CompraEstado = CompraEstado.Pendiente,
 
                 }
 
@@ -1146,9 +1170,22 @@ namespace CargaDatos
                 Evaluacion = new Evaluacion()
                 {
                     FechaE = new DateTime(2022, 05, 05),
-                    Calificaion = "Regular"
+                    Calificaion = Calificaion.Regular
+
+                },
+                ReseñaLibro =new ReseñaLibro()
+                {
+                    Reseña = CalfLibro.malo,
+                    Detalles = ""
+                    
+                },
+                Compra = new Compra()
+                {
+                    Fecha = DateTime.Now,
+                    CompraEstado = CompraEstado.Pendiente,
 
                 }
+
 
 
             };
@@ -1175,10 +1212,15 @@ namespace CargaDatos
                 Evaluacion = new Evaluacion()
                 {
                     FechaE = new DateTime(2022, 05, 05),
-                    Calificaion = "Regular"
+                    Calificaion = Calificaion.Regular
+
+                },
+                ReseñaLibro = new ReseñaLibro()
+                {
+                    Reseña = CalfLibro.Excelente,
+                    Detalles = ""
 
                 }
-
 
             };
 
@@ -1204,7 +1246,19 @@ namespace CargaDatos
                 Evaluacion = new Evaluacion()
                 {
                     FechaE = new DateTime(2022, 05, 05),
-                    Calificaion = "Regular"
+                    Calificaion = Calificaion.Regular
+
+                },
+                ReseñaLibro = new ReseñaLibro()
+                {
+                    Reseña = CalfLibro.Excelente,
+                    Detalles = ""
+
+                },
+                Compra = new Compra()
+                {
+                    Fecha = DateTime.Now,
+                    CompraEstado = CompraEstado.Pendiente,
 
                 }
 
@@ -1225,32 +1279,37 @@ namespace CargaDatos
             {
                 Pedido= "Pedido 1",
                 InicioPedido=new DateTime(2021,01,01),
-                LimitePedido=new DateTime(2021,02,01)
+                LimitePedido=new DateTime(2021,02,01),
+                presupuesto = primerLibro
 
             };
             Inventario inventario2 = new Inventario()
             {
                 Pedido = "Pedido 2",
                 InicioPedido = new DateTime(2021, 03, 01),
-                LimitePedido = new DateTime(2021, 04, 01)
+                LimitePedido = new DateTime(2021, 04, 01),
+                presupuesto = segundoLibro
             };
             Inventario inventario3 = new Inventario()
             {
                 Pedido = "Pedido 3",
                 InicioPedido = new DateTime(2021, 05, 01),
-                LimitePedido = new DateTime(2021, 06, 01)
+                LimitePedido = new DateTime(2021, 06, 01),
+                presupuesto = tercerLibro
             };
             Inventario inventario4 = new Inventario()
             {
                 Pedido = "Pedido 4",
                 InicioPedido = new DateTime(2021, 07, 01),
-                LimitePedido = new DateTime(2021, 08, 01)
+                LimitePedido = new DateTime(2021, 08, 01),
+                presupuesto = cuartoLibro
             };
             Inventario inventario5 = new Inventario()
             {
                 Pedido = "Pedido 5",
                 InicioPedido = new DateTime(2021, 09, 01),
-                LimitePedido = new DateTime(2021, 10, 01)
+                LimitePedido = new DateTime(2021, 10, 01),
+                presupuesto = quintoLibro
             };
 
 
@@ -1417,6 +1476,19 @@ namespace CargaDatos
 
 
 
+            //Configuracion
+            Configuracion conf = new Configuracion()
+            {
+                DiasEntreMinimos = 20,
+                NombreDistribuidor ="Libreria Española",
+                PedidosTotales = 80,
+                LibrosMinimos = 25
+            };
+            List<Configuracion> listaConfiguracion = new List<Configuracion>() { conf };
+
+
+
+
             List<Prerequisito> listaPrerequisitos = new List<Prerequisito>()
             {
                 //primerlibro
@@ -1437,7 +1509,8 @@ namespace CargaDatos
             {
                 { ListaTipo.Prerequisitos, listaPrerequisitos },
                 {ListaTipo.Iventarios,listaInventarios },
-                {ListaTipo.Presupuestos,listaPresupuestos }
+                {ListaTipo.Presupuestos,listaPresupuestos },
+                {ListaTipo.Configuracion, listaConfiguracion}
 
             };
 

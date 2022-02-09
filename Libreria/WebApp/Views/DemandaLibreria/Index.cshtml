@@ -40,7 +40,8 @@
                     <td>Usuario</td>
                     <td>Libro</td>
                     <td>Fecha</td>
-                    <td>confirmacion</td>
+
+                    <td>Acciones</td>
                 </tr>
             </thead>
             <tbody>
@@ -51,7 +52,7 @@
                         <td>@demandaLibreria.Usuario</td>
                         <td>@demandaLibreria.Libro</td>
                         <td>@demandaLibreria.Fechas</td>
-                        <td>@demandaLibreria.ConfirmacionDL</td>
+                        
                         <td>
                             <a asp-controller="DemandaLibreria" asp-action="Edit" asp-route-id="@demandaLibreria.DemandalibreriaId" class="btn btn-primary">Editar</a>
                             <a asp-controller="DemandaLibreria" asp-action="Delete" asp-route-id="@demandaLibreria.DemandalibreriaId" class="btn btn-danger">Eliminar</a>

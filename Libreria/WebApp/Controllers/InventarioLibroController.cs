@@ -23,13 +23,29 @@ namespace WebApp.Controllers
         }
 
 
-        public IActionResult Delete()
-        {
-            return View();
-        }
+        //crear
+
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Create(InventarioLibro inventarioLibro)
+        {
+            //Grabar
+            db.InventarioLibros.Add(inventarioLibro);
+            db.SaveChanges();
+
+            TempData["mensaje"] = $"Grabado {inventarioLibro.InventarioL} exitosamente";
+
+
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
     }
 }

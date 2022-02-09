@@ -1,0 +1,77 @@
+﻿@using modelo.entidades;
+
+@model IEnumerable<Evaluacion>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Evaluaciones</h1>
+<p>Lista evaluaciones</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Evaluaciones</h3>
+        </div>
+        <div class="col-sm-6">
+            <a asp-controller="Evaluacion" asp-action="Create" class="btn btn-success d-block">Agregar nueva </a>
+        </div>
+    </div>
+
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["mensaje"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-hidden="true">
+                    &times;
+                </span>
+            </button>
+        </div>
+    }
+
+    <div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Libro</td>
+                    <td>Fecha</td>
+                    <td>Calificacion</td>
+                    <td>Acciones</td>
+                </tr>
+            </thead>
+            @foreach (Evaluacion evaluacion in Model)
+            {
+                <tr>
+                    <td>@evaluacion.EvaluacionId</td>
+                    <td>@evaluacion.Presupuesto.LibrosP</td>
+                    <td>@evaluacion.FechaE.ToShortDateString()</td>
+                    <td>@evaluacion.Calificaion</td>
+                    <td>
+                        <a asp-controller="Evaluacion" asp-action="Edit" asp-route-id="@evaluacion.EvaluacionId" class="btn btn-primary">Editar</a>
+                        <a asp-controller="Evaluacion" asp-action="Delete" asp-route-id="@evaluacion.EvaluacionId" class="btn btn-danger">Eliminar</a>
+                    
+
+                    </td>
+
+
+                </tr>
+            }
+
+
+
+            </table>
+    </div>
+
+
+
+
+
+
+
+    </div>

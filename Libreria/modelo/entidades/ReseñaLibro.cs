@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace modelo.entidades
 {
-    
-    public class DemandaLibreria
+    public enum CalfLibro { Excelente, buena, malo }
+
+    public class ReseñaLibro
     {
-        public int DemandalibreriaId { get; set; }
-        public string Usuario { get; set; }
-        public string Libro { get; set; }
-        public DateTime Fechas { get; set; }
-      
 
-
+        public int ReseñaLibroId { get; set; }
+        public CalfLibro Reseña { get; set; }
+        public string Detalles { get; set; }
 
         public int PresupuestoId { get; set; }
         public Presupuesto presupuesto { get; set; }
-      
-    
+
+
+
+
+
     }
 }

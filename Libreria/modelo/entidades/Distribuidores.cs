@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace modelo.entidades
 {
+    public enum ConfirmacionD { Aprobado, Rechazado}
+
+
     public class Distribuidores
     {
         public int DistribuidoresId { get; set; }
@@ -14,7 +17,7 @@ namespace modelo.entidades
         public string Edicion { get; set; }
         public string Oferta { get; set; }
         public string Editoriales { get; set; }
-        public string ConfirmacionD { get; set; }
+        public ConfirmacionD ConfirmacionD { get; set; }
 
 
 

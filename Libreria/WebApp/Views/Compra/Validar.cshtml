@@ -1,0 +1,62 @@
+﻿@using modelo.entidades;
+
+@model Compra
+
+@{
+    ViewData["Title"] = "Validar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Compra</h1>
+<p>Validar Del presupuesto @Model.presupuesto.LibrosP</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form method="post" asp-action="Validar">
+                <div class="form-group">
+                    <label class="control-label">Compra Id</label>
+                    <input class="form-control" asp-for="CompraId" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Libro</label>
+                    <input class="form-control" asp-for="presupuesto.LibrosP" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Estado</label>
+                    <input class="form-control" asp-for="CompraEstado" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Validar" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+
+        <div class="col-sm-8">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>Evaluacion</td>
+                        <td>Distribuidores</td>
+                        <td>Prerequisitos</td>
+                        <td>Inventario de libros</td>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>@Model.presupuesto.Evaluacion.Calificaion</td>
+                        <td>@Model.presupuesto.Distribuidores.Count()</td>
+                        <td>@Model.presupuesto.prerequisitos.Count()</td>
+                        <td>@Model.presupuesto.InventarioLibros.Count()</td>
+                        
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

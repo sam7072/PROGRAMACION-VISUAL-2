@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "consola", "consola\consola.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CargaDatos", "CargaDatos\CargaDatos.csproj", "{8530F4D9-5EFA-42D0-8992-2C9C80474275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{4D096480-1F2A-46EC-A86F-3728C343E80F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{4D096480-1F2A-46EC-A86F-3728C343E80F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procesos", "Procesos\Procesos.csproj", "{04587B31-474A-42DB-9BCE-14BC449EF97F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{4D096480-1F2A-46EC-A86F-3728C343E80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D096480-1F2A-46EC-A86F-3728C343E80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D096480-1F2A-46EC-A86F-3728C343E80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04587B31-474A-42DB-9BCE-14BC449EF97F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04587B31-474A-42DB-9BCE-14BC449EF97F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04587B31-474A-42DB-9BCE-14BC449EF97F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04587B31-474A-42DB-9BCE-14BC449EF97F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -29,6 +29,11 @@ namespace modelo.entidades
         public Evaluacion Evaluacion { get; set; }
         //relacion RegistroLibro
         public RegistroLibro RegistroLibro { get; set; }
+        //relacion Reseña
+        public ReseñaLibro ReseñaLibro { get; set; }
+        //Relacion Compra
+        public Compra Compra { get; set; }
+
 
         //relacion prerequisito
         public IList<Prerequisito> prerequisitos { get; set; }
