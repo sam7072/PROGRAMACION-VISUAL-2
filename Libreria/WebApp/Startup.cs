@@ -27,7 +27,7 @@ namespace WebApp
             //agregar al servicio el DBContext del modelo
             services.AddDbContext <DBLibreria>( options =>
 
-             options.UseSqlServer("server=DESKTOP-R1P6HVR; database=Biblioteca; user id=sa; password=Admin123;")
+             options.UseSqlServer("server=DESKTOP-R1P6HVR; database=LibreriaWeb; user id=sa; password=Admin123;")
              );
             services.AddControllersWithViews();
 

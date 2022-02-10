@@ -18,7 +18,7 @@
         </div>
         <div class="col-sm-5">
             <a class="btn btn-success d-block"
-               asp-controller="Presupuestos" asp-action="Create">
+               asp-controller="Presupuesto" asp-action="Create">
                Agregar nuevo Presupuesto</a>
         </div>
     </div>
@@ -62,8 +62,8 @@
                         <td>@presupuesto.CantidadP</td>
                         <td>@presupuesto.DistribuidorP</td>
                         <td>
-                            <a asp-controller="Presupuestos" asp-action="Edit" asp-route-id="@presupuesto.PresupuestoId" class="btn btn-primary">Editar</a>
-                            <a asp-controller="Presupuestos" asp-action="Delete" asp-route-id="@presupuesto.PresupuestoId" class="btn btn-danger">Eliminar</a>
+                            <a asp-controller="Presupuesto" asp-action="Edit" asp-route-id="@presupuesto.PresupuestoId" class="btn btn-primary">Editar</a>
+                            <a asp-controller="Presupuesto" asp-action="Delete" asp-route-id="@presupuesto.PresupuestoId" class="btn btn-danger">Eliminar</a>
                         
                         </td>
                     </tr>

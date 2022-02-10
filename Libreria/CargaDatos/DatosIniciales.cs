@@ -1279,36 +1279,36 @@ namespace CargaDatos
             {
                 Pedido= "Pedido 1",
                 InicioPedido=new DateTime(2021,01,01),
-                LimitePedido=new DateTime(2021,02,01),
+                LimitePedido=new DateTime(2021,01,02),
                 presupuesto = primerLibro
 
             };
             Inventario inventario2 = new Inventario()
             {
                 Pedido = "Pedido 2",
-                InicioPedido = new DateTime(2021, 03, 01),
-                LimitePedido = new DateTime(2021, 04, 01),
+                InicioPedido = new DateTime(2021, 02, 03),
+                LimitePedido = new DateTime(2021, 02, 04),
                 presupuesto = segundoLibro
             };
             Inventario inventario3 = new Inventario()
             {
                 Pedido = "Pedido 3",
-                InicioPedido = new DateTime(2021, 05, 01),
-                LimitePedido = new DateTime(2021, 06, 01),
+                InicioPedido = new DateTime(2021, 03, 05),
+                LimitePedido = new DateTime(2021, 03, 06),
                 presupuesto = tercerLibro
             };
             Inventario inventario4 = new Inventario()
             {
                 Pedido = "Pedido 4",
-                InicioPedido = new DateTime(2021, 07, 01),
-                LimitePedido = new DateTime(2021, 08, 01),
+                InicioPedido = new DateTime(2021, 04, 07),
+                LimitePedido = new DateTime(2021, 04, 08),
                 presupuesto = cuartoLibro
             };
             Inventario inventario5 = new Inventario()
             {
                 Pedido = "Pedido 5",
-                InicioPedido = new DateTime(2021, 09, 01),
-                LimitePedido = new DateTime(2021, 10, 01),
+                InicioPedido = new DateTime(2021, 05, 09),
+                LimitePedido = new DateTime(2021, 05, 10),
                 presupuesto = quintoLibro
             };
 
